@@ -19,40 +19,44 @@ hspd=0
 x+=hspd
 #endregion
 
-#region Pulo variavel, CoyoteTime e Gravidade
+#region Pulo variavel, CoyoteTime, Jump Buffer e Gravidade
 
 //Botões para o pulo variavel
 var key_jump_pressed = keyboard_check_pressed(ord("Z"))
 var key_jump = keyboard_check(ord("Z"))
 
-// Coyote Time
-// Enquanto o player estiver no chão, o contador é restaurado
-// Ao sair da plataforma, ele começa a diminuir
-if place_meeting(x, y + 1, obj_solid){
-coyote_time=coyote_time_max
-}else{
-coyote_time--;
+//Jump Buffer
+if (key_jump_pressed){
+	jump_buffer = jump_buffer_max
+}else if (jump_buffer > 0){
+	jump_buffer--
 }
 
-// Pulo
-// O pulo acontece em duas situações:
-// 1-quando o jogador está no chão
-// 2-quando ainda existe tempo restante no coyote time
-if (key_jump_pressed and place_meeting(x, y + 1, obj_solid) or key_jump_pressed and coyote_time>0)
+//Coyote Time
+//Enquanto o player estiver no chão, o contador é restaurado
+//Ao sair da plataforma, ele começa a diminuir
+if place_meeting(x, y + 1, obj_solid){
+	coyote_time = coyote_time_max
+}else{
+	coyote_time--
+}
+
+//Pulo
+//O pulo acontece quando existe input armazenado
+//e o jogador ainda pode pular pelo chão ou coyote time
+if (jump_buffer > 0 and (place_meeting(x, y + 1, obj_solid) or coyote_time > 0))
 {
-	coyote_time=0
-    vspd-=jump_height
-    jump=1
+	jump_buffer = 0
+	coyote_time = 0
+	vspd = -jump_height
 }
 
 //Pulo variavel
 //limitando altura do pulo
-if (!key_jump and vspd<0){vspd=max(vspd,-jump_height/2)}
+if (!key_jump and vspd < 0){vspd = max(vspd, -jump_height / 2)}
 
 //gravidade
-if !place_meeting(x,y+1,obj_solid){
-vspd+=grav
-}
+if !place_meeting(x, y + 1, obj_solid){vspd += grav}
 
 #endregion
 
@@ -64,7 +68,7 @@ if place_meeting(x,y+vspd,obj_solid)
 {
 		y+=sign(vspd)
 }
-vspd=0 jump=0
+vspd=0 
 }
 
 y+=vspd
