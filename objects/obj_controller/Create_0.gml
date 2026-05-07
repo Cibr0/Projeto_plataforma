@@ -1,0 +1,1 @@
+global.moedas = 0;
