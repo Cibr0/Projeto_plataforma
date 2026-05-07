@@ -1,13 +1,24 @@
 //movimentação 
 move=-keyboard_check(vk_left)+keyboard_check(vk_right)
+hspd=move*spd
 //Botões para o pulo variavel
 var key_jump_pressed = keyboard_check_pressed(ord("Z"))
 var key_jump = keyboard_check(ord("Z"))
-hspd=move*spd
+
+if place_meeting(x, y + 1, obj_solid){
+coyote_time=coyote_time_max
+}else{
+coyote_time--;
+}
 
 //pulo
 //se clicar z e segurar eu pulo
-if key_jump_pressed && jump==0{vspd=-8 jump=1}
+if (key_jump_pressed and place_meeting(x, y + 1, obj_solid) or key_jump_pressed and coyote_time>0)
+{
+	coyote_time=0
+    vspd-=jump_height
+    jump=1
+}
 
 //gravidade 
 //caindo
@@ -39,9 +50,6 @@ if place_meeting(x,y+vspd,obj_solid)
 }
 vspd=0 jump=0
 }
-
-
-
 
 y+=vspd
 x+=hspd
