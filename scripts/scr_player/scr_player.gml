@@ -3,8 +3,18 @@ function scr_player(){
 
 #region Movimentação e colisão horizontal
 
-move=-keyboard_check(vk_left)+keyboard_check(vk_right)
-hspd=move*spd
+move = -keyboard_check(vk_left) + keyboard_check(vk_right);
+
+//aceleração
+if (move != 0) {
+    spd=clamp(spd+acc,0,spd_max);
+} 
+//desaceleração
+else {
+    spd=max(spd-dcc, 0);
+}
+
+hspd=move*spd;
 
 //Colisão horizontal
 if place_meeting(x+hspd,y,obj_solid)
