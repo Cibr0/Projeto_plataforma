@@ -3,8 +3,8 @@ hspd=0;
 vspd=0;
 spd=0;
 spd_max=5;
-acc=0.25;
-dcc=0.30;
+acc=0.28;
+dcc=0.28;
 
 //gravidade e pulo
 grav=0.3;

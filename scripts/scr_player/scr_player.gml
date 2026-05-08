@@ -4,17 +4,38 @@ function scr_player(){
 #region Movimentação e colisão horizontal
 
 move = -keyboard_check(vk_left) + keyboard_check(vk_right);
+//Variaveis de colisão
+var ground = place_meeting(x, y + 1, obj_solid);
+var ice = place_meeting(x, y + 1, obj_ice);
 
 //aceleração
 if (move != 0) {
-    spd=clamp(spd+acc,0,spd_max);
-} 
-//desaceleração
+    hspd+=move*acc;
+    hspd=clamp(hspd,-spd_max,spd_max);
+}
+//desaceleração/fricção
 else {
-    spd=max(spd-dcc, 0);
+    if (hspd > 0) {
+        hspd=max(0,hspd-dcc);
+    }
+    else if (hspd < 0) {
+        hspd=min(0,hspd+dcc);
+    }
 }
 
-hspd=move*spd;
+if (ground) {
+    acc = 0.28;
+    dcc = 0.28;
+
+    if (ice) {
+        acc = 0.12;
+        dcc = 0.05;
+    }
+}
+else {
+    acc = 0.20;
+    dcc = 0;
+}
 
 //Colisão horizontal
 if place_meeting(x+hspd,y,obj_solid)
@@ -26,8 +47,12 @@ if place_meeting(x+hspd,y,obj_solid)
 hspd=0
 }
 
+
+
 x+=hspd
 #endregion
+
+
 
 #region Pulo variavel, CoyoteTime, Jump Buffer e Gravidade
 
