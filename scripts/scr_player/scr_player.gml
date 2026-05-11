@@ -3,6 +3,7 @@ function scr_player(){
 
 #region Movimentação e colisão horizontal
 
+//Variavel de movimentação
 move = -keyboard_check(vk_left) + keyboard_check(vk_right);
 //Variaveis de colisão
 var ground = place_meeting(x, y + 1, obj_solid);
@@ -25,7 +26,7 @@ else {
 
 if (ground) {
     acc = 0.28;
-    dcc = 0.28;
+    dcc = 0.30;
 
     if (ice) {
         acc = 0.12;
@@ -47,12 +48,8 @@ if place_meeting(x+hspd,y,obj_solid)
 hspd=0
 }
 
-
-
 x+=hspd
 #endregion
-
-
 
 #region Pulo variavel, CoyoteTime, Jump Buffer e Gravidade
 
