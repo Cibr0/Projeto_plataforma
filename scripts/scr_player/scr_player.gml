@@ -109,7 +109,9 @@ y+=vspd
 
 #region Vento Lateral
 
+var wind = instance_place(x, y, obj_wind);
 
+if (wind){hspd-=wind.force;}
 
 #endregion
 
