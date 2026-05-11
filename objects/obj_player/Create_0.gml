@@ -1,4 +1,4 @@
-estado=scr_player_andando
+estado=scr_player_onground
 
 //movimentação
 hspd=0;

@@ -1,5 +1,5 @@
 
-function scr_player_andando(){
+function scr_player_onground(){
 
 #region Movimentação e colisão horizontal
 
@@ -92,7 +92,7 @@ if !place_meeting(x, y + 1, obj_solid){vspd += grav}
 
 #endregion
 
-#region Colisão vertival 
+#region Colisão vertival
 
 if place_meeting(x,y+vspd,obj_solid)
 {
@@ -104,6 +104,12 @@ vspd=0
 }
 
 y+=vspd
+
+#endregion
+
+#region Vento Lateral
+
+
 
 #endregion
 
@@ -151,3 +157,4 @@ if (key_eco) {
 #endregion
 
 }
+
