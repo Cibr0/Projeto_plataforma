@@ -1,1 +1,1 @@
-eco = true
+spreco = true

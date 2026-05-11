@@ -38,6 +38,19 @@ else {
     dcc = 0;
 }
 
+#region Vento Lateral
+
+var wind = instance_place(x, y, obj_wind);
+var wind_force = 0;
+
+if (wind) {
+    wind_force = -wind.force;
+}
+
+hspd += wind_force;
+
+#endregion
+
 //Colisão horizontal
 if place_meeting(x+hspd,y,obj_solid)
 {
@@ -107,13 +120,7 @@ y+=vspd
 
 #endregion
 
-#region Vento Lateral
 
-var wind = instance_place(x, y, obj_wind);
-
-if (wind){hspd-=wind.force;}
-
-#endregion
 
 #region Eco Temporal (Power-up)
 
