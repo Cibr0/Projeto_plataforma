@@ -1,5 +1,5 @@
 
-function scr_player(){
+function scr_player_andando(){
 
 #region Movimentação e colisão horizontal
 
@@ -26,7 +26,7 @@ else {
 
 if (ground) {
     acc = 0.28;
-    dcc = 0.30;
+    dcc = 0.35;
 
     if (ice) {
         acc = 0.12;

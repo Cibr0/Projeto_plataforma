@@ -37,7 +37,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"spr_falling_plataform",
     "path":"sprites/spr_falling_plataform/spr_falling_plataform.yy",

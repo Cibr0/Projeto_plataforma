@@ -1,1 +1,1 @@
-scr_player()
+script_execute(estado)

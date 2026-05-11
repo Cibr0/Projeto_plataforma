@@ -1,3 +1,5 @@
+estado=scr_player_andando
+
 //movimentação
 hspd=0;
 vspd=0;
@@ -23,3 +25,4 @@ ecoy = 0;
 // Tempo de ativação e de Recarga
 eco_time = game_get_speed(gamespeed_fps) * 10; 
 eco_cooldown = game_get_speed(gamespeed_fps) * 5;
+
