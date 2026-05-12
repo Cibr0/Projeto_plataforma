@@ -6,8 +6,8 @@
   "name":"obj_ice",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"grp_solid",
+    "path":"folders/Objects/grp_solid.yy",
   },
   "parentObjectId":{
     "name":"obj_solid",

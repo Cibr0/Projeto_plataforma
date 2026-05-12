@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_collidion_plataform",
+  "%Name":"obj_coll_plataform",
   "eventList":[],
   "managed":true,
-  "name":"obj_collidion_plataform",
+  "name":"obj_coll_plataform",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"grp_plataform",
+    "path":"folders/Objects/grp_solid/grp_plataform.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_collision_plataform",
-    "path":"sprites/spr_collision_plataform/spr_collision_plataform.yy",
+    "name":"spr_coll_plataform",
+    "path":"sprites/spr_coll_plataform/spr_coll_plataform.yy",
   },
   "spriteMaskId":null,
   "visible":false,

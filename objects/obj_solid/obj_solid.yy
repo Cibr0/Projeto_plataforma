@@ -9,8 +9,8 @@
   "name":"obj_solid",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"grp_solid",
+    "path":"folders/Objects/grp_solid.yy",
   },
   "parentObjectId":null,
   "persistent":false,

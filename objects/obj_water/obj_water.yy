@@ -6,8 +6,8 @@
   "name":"obj_water",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"grp_nature",
+    "path":"folders/Objects/grp_nature.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,5 +32,5 @@
     "path":"sprites/spr_water/spr_water.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

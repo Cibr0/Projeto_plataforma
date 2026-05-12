@@ -8,8 +8,8 @@
   "name":"obj_moeda",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"grp_itens",
+    "path":"folders/Objects/grp_itens.yy",
   },
   "parentObjectId":null,
   "persistent":false,

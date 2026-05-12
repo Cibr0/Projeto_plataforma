@@ -9,8 +9,8 @@
   "name":"Obj_move_plataform",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"grp_plataform",
+    "path":"folders/Objects/grp_solid/grp_plataform.yy",
   },
   "parentObjectId":{
     "name":"obj_solid",

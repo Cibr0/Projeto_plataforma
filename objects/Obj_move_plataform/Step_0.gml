@@ -1,6 +1,6 @@
 velh = dir*velc;
 
-if(instance_place(x+velh,y,obj_collidion_plataform)){
+if(instance_place(x+velh,y,obj_coll_plataform)){
 	
 	dir*=-1;
 }
