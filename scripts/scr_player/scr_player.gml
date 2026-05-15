@@ -192,8 +192,39 @@ if (keyboard_check_pressed(ord("Z"))) {
 }else {
 //Valores normais
 grav=0.3;
-spd_max = 5;
+spd_max = 3;
 }
+#endregion
+
+
+#region animations
+//Animação de pulo
+if (!ground) {
+
+    sprite_index = spr_cat_jump;
+
+}
+//Animações no chão
+else {
+
+    switch sign(move){
+
+        case 1:
+            image_xscale = -1;
+            sprite_index = spr_cat_walk;
+        break;
+
+        case -1:
+            image_xscale = 1;
+            sprite_index = spr_cat_walk;
+        break;
+
+        case 0:
+            sprite_index = spr_cat_idle;
+        break;
+    }
+}
+
 #endregion
 
 }
