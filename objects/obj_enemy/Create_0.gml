@@ -17,4 +17,4 @@ dist_attack = 120;
 
 // Variáveis de combate
 can_attack = true;
-attack_cooldown = 60; // Em frames
+attack_cooldown = game_get_speed(gamespeed_fps) * 2;

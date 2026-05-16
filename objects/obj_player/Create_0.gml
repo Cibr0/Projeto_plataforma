@@ -26,3 +26,27 @@ ecoy = 0;
 eco_time = game_get_speed(gamespeed_fps) * 10; 
 eco_cooldown = game_get_speed(gamespeed_fps) * 5;
 
+lifes = 5; // Número de vida do jogador
+is_invincible = false; // Impede novos danos se true
+iframe_duration = game_get_speed(gamespeed_fps) * 1; // Tempod de invulnerabilidade (1 segundo)
+
+flash_alpha_speed = 0.15; // Velocidade da oscilção do efeito
+
+function damage (_damage_amount) {
+    if (is_invincible) exit;
+
+    lifes -= _damage_amount; // Aplica o dano 
+
+    // Ativa a flag de proteção
+    is_invincible = true; 
+    alarm[2] = iframe_duration;
+
+    if (lifes <= 0) {
+        room_restart(); // Reinicia a fase atual se morto
+    }
+}
+
+hsp = 0;
+vsp = 0;
+
+hurt = false;
