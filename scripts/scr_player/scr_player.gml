@@ -223,6 +223,19 @@ else {
             sprite_index = spr_cat_idle;
         break;
     }
+var collision_e = instance_place(x+hspd,y,obj_projectile);
+	if(collision_e){
+		hspd = 0;
+		vspd = 0;
+		damage_dir = point_direction(collision_e.x,collision_e.y,x,y);
+		vspd -= 4;
+		state = player_states_damage;
+	}
+function player_states_damage(){
+	sprite_index = spr_cat_idle;
+	hspd = lengthdir_x(4,damage_dir);
+	
+}
 }
 
 #endregion

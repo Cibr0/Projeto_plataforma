@@ -26,3 +26,11 @@ ecoy = 0;
 eco_time = game_get_speed(gamespeed_fps) * 10; 
 eco_cooldown = game_get_speed(gamespeed_fps) * 5;
 
+// Direção do dano
+
+damage_dir = 0;
+damage_time = 0;
+damage_distance = 20;
+
+estado=scr_player_onground
+
