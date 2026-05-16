@@ -10,17 +10,32 @@ var ground = place_meeting(x, y + 1, obj_solid);
 var ice = place_meeting(x, y + 1, obj_ice);
 
 //aceleração
-if (move != 0) {
-    hspd+=move*acc;
-    hspd=clamp(hspd,-spd_max,spd_max);
-}
-//desaceleração/fricção
-else {
-    if (hspd > 0) {
-        hspd=max(0,hspd-dcc);
+if (!hurt)
+{
+    //aceleração
+    if (move != 0) {
+        hspd += move * acc;
+        hspd = clamp(hspd, -spd_max, spd_max);
     }
-    else if (hspd < 0) {
-        hspd=min(0,hspd+dcc);
+
+    //desaceleração/fricção
+    else {
+        if (hspd > 0) {
+            hspd = max(0, hspd - dcc);
+        }
+        else if (hspd < 0) {
+            hspd = min(0, hspd + dcc);
+        }
+    }
+}
+else
+{
+    hspd *= 0.90;
+
+    if (abs(hspd) < 0.5)
+    {
+        hurt = false;
+        hspd = 0;
     }
 }
 
@@ -223,21 +238,23 @@ else {
             sprite_index = spr_cat_idle;
         break;
     }
-var collision_e = instance_place(x+hspd,y,obj_projectile);
-	if(collision_e){
-		hspd = 0;
-		vspd = 0;
-		damage_dir = point_direction(collision_e.x,collision_e.y,x,y);
-		vspd -= 4;
-		state = player_states_damage;
-	}
-function player_states_damage(){
-	sprite_index = spr_cat_idle;
-	hspd = lengthdir_x(4,damage_dir);
-	
-}
+
 }
 
 #endregion
 
+#region Knockback
+if (hurt)
+{
+    hsp *= 0.90;
+
+    if (abs(hsp) < 0.5)
+    {
+        hurt = false;
+        hsp = 0;
+    }
 }
+
+}
+
+

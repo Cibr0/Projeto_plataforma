@@ -38,7 +38,7 @@ function state_chase() {
     if (!instance_exists(obj_player)) return;
 
     dir = sign(obj_player.x - x);
-    hsp = dir * (move_spd * 1.5);
+    hsp = dir * move_spd;
 
     if (place_meeting(x + hsp, y, object_index)) {
         hsp = 0;
