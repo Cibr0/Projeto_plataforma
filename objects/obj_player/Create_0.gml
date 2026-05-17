@@ -46,7 +46,4 @@ function damage (_damage_amount) {
     }
 }
 
-hsp = 0;
-vsp = 0;
-
 hurt = false;

@@ -65,9 +65,8 @@ if (wind) {
 hspd += wind_force;
 
 #endregion
-
 //Colisão horizontal
-if place_meeting(x+hspd,y,obj_solid)
+if place_meeting(x+round(hspd),y,obj_solid)
 {
 	while !place_meeting(x+sign(hspd),y,obj_solid)
 {
@@ -76,7 +75,7 @@ if place_meeting(x+hspd,y,obj_solid)
 hspd=0
 }
 
-x+=hspd
+x += round(hspd);
 #endregion
 
 #region Pulo variavel, CoyoteTime, Jump Buffer e Gravidade
@@ -95,7 +94,7 @@ if (key_jump_pressed){
 //Coyote Time
 //Enquanto o player estiver no chão, o contador é restaurado
 //Ao sair da plataforma, ele começa a diminuir
-if place_meeting(x, y + 1, obj_solid){
+if ground{
 	coyote_time = coyote_time_max
 }else{
 	coyote_time--
@@ -116,22 +115,22 @@ if (jump_buffer > 0 and (place_meeting(x, y + 1, obj_solid) or coyote_time > 0))
 if (!key_jump and vspd < 0){vspd = max(vspd, -jump_height / 2)}
 
 //gravidade
-if !place_meeting(x, y + 1, obj_solid){vspd += grav}
+if (!ground) vspd += grav;
 
 #endregion
 
 #region Colisão vertival
 
-if place_meeting(x,y+vspd,obj_solid)
+if place_meeting(x,y+(vspd),obj_solid)
 {
 	while !place_meeting(x,y+sign(vspd),obj_solid)
 {
 		y+=sign(vspd)
 }
-vspd=0 
+vspd=0
 }
 
-y+=vspd
+y+= vspd;
 
 #endregion
 
@@ -211,7 +210,6 @@ spd_max = 3;
 }
 #endregion
 
-
 #region animations
 //Animação de pulo
 if (!ground) {
@@ -242,18 +240,6 @@ else {
 }
 
 #endregion
-
-#region Knockback
-if (hurt)
-{
-    hsp *= 0.90;
-
-    if (abs(hsp) < 0.5)
-    {
-        hurt = false;
-        hsp = 0;
-    }
-}
 
 }
 
