@@ -46,14 +46,13 @@ function damage (_damage_amount) {
 		if (global.check_y != 0) {
 			x = global.check_x;
 			y = global.check_y;
+			room_restart()
 		} else {
 			room_restart(); // Reinicia a fase atual se morto
 		}
 		
 		lifes = 5;
-	}
-
-	
+	}	
 	
 }
 

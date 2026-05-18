@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_moeda",
-    "path":"sprites/spr_moeda/spr_moeda.yy",
+    "name":"spr_fish",
+    "path":"sprites/spr_fish/spr_fish.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -34,6 +34,7 @@ if (!hurt)
 }
 //knockback
 else
+
 {
     hspd *= 0.90;
 
@@ -43,6 +44,7 @@ else
         hspd = 0;
     }
 }
+
 
 //mudança de valores de aceleração e desaceleração
 if (ground) {
