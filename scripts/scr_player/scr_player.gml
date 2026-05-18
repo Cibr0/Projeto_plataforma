@@ -51,9 +51,12 @@ if (ground) {
     acc = 0.28;
     dcc = 0.28;
 
-	if (global.powerup2 == true && !hurt) {
-		double_jump = true;
-	}
+if (variable_global_exists("powerup2")) {
+    
+    if (global.powerup2 && !hurt) {
+        double_jump = true;
+    }
+}
 
     if (ice) {
         acc = 0.12;
@@ -122,8 +125,8 @@ if (jump_buffer > 0 and (place_meeting(x, y + 1, obj_solid) or coyote_time > 0))
 	vspd = -jump_height
 }
 
-if (keyboard_check_pressed(ord("Z")) and !place_meeting(x, y + 1, obj_solid) and !hurt) {
-    if (global.powerup2 == true and double_jump) {
+if (keyboard_check_pressed(ord("Z")) and !place_meeting(x, y + 1, obj_solid) and coyote_time <0 and !hurt) {
+   if (variable_global_exists("powerup2") and global.powerup2 and double_jump) {
         vspd = -jump_height;     
         double_jump = false; 
         jump_buffer = 0;         
