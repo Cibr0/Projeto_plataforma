@@ -1,3 +1,6 @@
+//variais de checkpoint
+global.check_x = 0;
+global.check_y = 0;
 
 function scr_player_onground(){
 
@@ -8,6 +11,7 @@ move = -keyboard_check(vk_left) + keyboard_check(vk_right);
 //Variaveis de colisão
 var ground = place_meeting(x, y + 1, obj_solid);
 var ice = place_meeting(x, y + 1, obj_ice);
+
 
 //aceleração
 if (!hurt)
