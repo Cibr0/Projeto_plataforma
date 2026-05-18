@@ -1,0 +1,1 @@
+global.powerup2 = false;

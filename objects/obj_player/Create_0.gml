@@ -15,6 +15,7 @@ jump_buffer = 0;
 jump_buffer_max = 8;
 coyote_time_max=11;
 coyote_time=0;
+double_jump = false
 
 // Power-up: Eco Temporal
 eco = true;
