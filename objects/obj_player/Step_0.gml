@@ -6,4 +6,11 @@ if (is_invincible) {
     image_alpha = 1.0;
 }
 
-if place_meeting(x,y,obj_tuto){tuto=1}else{tuto=0}
+var tuto_obj = instance_place(x, y, obj_tuto);
+
+if tuto_obj != noone {
+    tuto = 1;
+    tuto_sprite = tuto_obj.sprite_tuto;
+} else {
+    tuto = 0;
+}

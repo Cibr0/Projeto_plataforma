@@ -135,6 +135,8 @@ y+= vspd;
 #endregion
 
 #region Eco Temporal (Power-up)
+
+//so funciona se o jogador desbloquear o power up
 if global.powerup1=true{
 // Input do Eco 
 var key_eco = keyboard_check_pressed(ord("X"));
@@ -143,9 +145,12 @@ if (key_eco) {
     // ESTADO 1: Criar o Eco
     // Só funciona se o poder estiver carregado (eco) e não houver um ponto ativo (!eco_load)
     if (eco && !eco_load) {
+		
         ecox = x;
         ecoy = y;
         eco_load = true; 
+		//atima tema alternativo
+		global.tema_ativo = true;
 		
 		// Inicia o alarme de expiração (O ponto dura 10 segundos)
         alarm[0] = eco_time; 
@@ -156,6 +161,10 @@ if (key_eco) {
     else if (eco_load) {
         x = ecox;
         y = ecoy;
+		
+		//desativa o tema
+		global.tema_ativo = false;
+		
         
         // Zera a velocidade para não chegar no destino caindo ou subindo
         vspd = 0; 

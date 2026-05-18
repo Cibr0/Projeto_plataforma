@@ -1,2 +1,2 @@
-globalvar sprite;
-
+tuto = 0;
+tuto_sprite = noone;
