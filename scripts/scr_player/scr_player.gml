@@ -32,6 +32,7 @@ if (!hurt)
         }
     }
 }
+//knockback
 else
 {
     hspd *= 0.90;
@@ -43,13 +44,14 @@ else
     }
 }
 
+//mudança de valores de aceleração e desaceleração
 if (ground) {
     acc = 0.28;
-    dcc = 0.35;
+    dcc = 0.28;
 
     if (ice) {
         acc = 0.12;
-        dcc = 0.05;
+        dcc = 0.001;
     }
 }
 else {
@@ -159,7 +161,7 @@ if (key_eco) {
 		// Inicia o alarme de expiração (O ponto dura 10 segundos)
         alarm[0] = eco_time; 
         
-    } 
+    }
     // ESTADO 2: Retornar ao Eco
     // Só funciona se já existir um ponto salvo (eco_load)
     else if (eco_load) {
@@ -183,7 +185,6 @@ if (key_eco) {
         
         // Inicia o alarme de recarga (Cooldown de 5 segundos)
         if (alarm[1] <= 0) alarm[1] = eco_cooldown;
-        
        
 		}
 	}

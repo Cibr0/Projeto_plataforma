@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ice",
+  "%Name":"obj_plataform_snow",
   "eventList":[],
   "managed":true,
-  "name":"obj_ice",
+  "name":"obj_plataform_snow",
   "overriddenProperties":[],
   "parent":{
-    "name":"grp_solid",
-    "path":"folders/Objects/grp_solid.yy",
+    "name":"grp_plataform",
+    "path":"folders/Objects/grp_solid/grp_plataform.yy",
   },
   "parentObjectId":{
     "name":"obj_solid",
@@ -31,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ice",
-    "path":"sprites/spr_ice/spr_ice.yy",
+    "name":"spr_plataform_snow",
+    "path":"sprites/spr_plataform_snow/spr_plataform_snow.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

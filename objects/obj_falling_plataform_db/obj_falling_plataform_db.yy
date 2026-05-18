@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_falling_plataform",
+  "%Name":"obj_falling_plataform_db",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_falling_plataform",
+  "name":"obj_falling_plataform_db",
   "overriddenProperties":[],
   "parent":{
     "name":"grp_plataform",

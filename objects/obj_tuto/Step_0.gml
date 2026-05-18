@@ -1,6 +1,6 @@
 if required_powerup {
 
-    if global.powerup1 {
+    if global.powerup1=true {
 
         if global.tema_ativo=true {
 			sprite_tuto=spr_return

@@ -6,6 +6,7 @@ if (is_invincible) {
     image_alpha = 1.0;
 }
 
+//tutoriais
 var tuto_obj = instance_place(x, y, obj_tuto);
 
 if tuto_obj != noone {
@@ -14,3 +15,4 @@ if tuto_obj != noone {
 } else {
     tuto = 0;
 }
+
