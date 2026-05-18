@@ -4,13 +4,13 @@ estado=scr_player_onground
 hspd=0;
 vspd=0;
 spd=0;
-spd_max=3;
+spd_max=2;
 acc=0.28;
 dcc=0.28;
 
 //gravidade e pulo
-grav=0.09;
-jump_height=5;
+grav=0.2;
+jump_height=4;
 jump_buffer = 0;
 jump_buffer_max = 8;
 coyote_time_max=11;
@@ -47,3 +47,5 @@ function damage (_damage_amount) {
 }
 
 hurt = false;
+
+tuto=0

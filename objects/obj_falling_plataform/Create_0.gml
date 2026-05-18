@@ -2,7 +2,7 @@ x_start = x;
 y_start = y;
 
 vspd=0;
-grav=0.5;
+grav=0.2;
 
 stepping=false
 falling=false

@@ -1,0 +1,1 @@
+global.powerup1=false

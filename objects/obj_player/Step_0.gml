@@ -5,3 +5,5 @@ if (is_invincible) {
 } else {
     image_alpha = 1.0;
 }
+
+if place_meeting(x,y,obj_tuto){tuto=1}else{tuto=0}

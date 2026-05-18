@@ -135,7 +135,7 @@ y+= vspd;
 #endregion
 
 #region Eco Temporal (Power-up)
-
+if global.powerup1=true{
 // Input do Eco 
 var key_eco = keyboard_check_pressed(ord("X"));
 
@@ -172,9 +172,9 @@ if (key_eco) {
         if (alarm[1] <= 0) alarm[1] = eco_cooldown;
         
        
-    }
+		}
+	}
 }
-
 #endregion
 
 #region Água
@@ -189,7 +189,7 @@ grav = 0.08;
 //Movimento mais lento
 acc = 0.10;
 dcc = 0.08;
-spd_max = 2;
+spd_max = 1;
 	
 //Limite de queda
 vspd = clamp(vspd, -2, 2);
@@ -205,8 +205,8 @@ if (keyboard_check_pressed(ord("Z"))) {
 	}
 }else {
 //Valores normais
-grav=0.3;
-spd_max = 3;
+grav=0.2;
+spd_max = 2;
 }
 #endregion
 
