@@ -43,6 +43,7 @@
   "name":"plataforma",
   "resources":[
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
+    {"id":{"name":"obj_checkpoint","path":"objects/obj_checkpoint/obj_checkpoint.yy",},},
     {"id":{"name":"obj_coll_plataform","path":"objects/obj_coll_plataform/obj_coll_plataform.yy",},},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},},

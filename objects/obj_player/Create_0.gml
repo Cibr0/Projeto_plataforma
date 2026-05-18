@@ -41,9 +41,20 @@ function damage (_damage_amount) {
     is_invincible = true; 
     alarm[2] = iframe_duration;
 
-    if (lifes <= 0) {
-        room_restart(); // Reinicia a fase atual se morto
-    }
+	if (lifes <= 0) {
+		//iniciando na posição do checkpoint
+		if (global.check_y != 0) {
+			x = global.check_x;
+			y = global.check_y;
+		} else {
+			room_restart(); // Reinicia a fase atual se morto
+		}
+		
+		lifes = 5;
+	}
+
+	
+	
 }
 
 hurt = false;
