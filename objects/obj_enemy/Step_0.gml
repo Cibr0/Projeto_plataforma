@@ -63,6 +63,8 @@ function state_attack() {
 
         alarm[0] = attack_cooldown;
     }
+	
+	move_safe();
 }
 
 function move_safe() {
