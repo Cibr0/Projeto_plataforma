@@ -26,11 +26,11 @@ for (var i = 0; i < 5; i++)
 {
     if (i < p.lifes)
     {
-        draw_sprite(spr_heart_full, 0, 20 + (i * 40), 20);
+        draw_sprite_ext(spr_heart_full, 0, 5 + (i * 35), 10,4,4,0,c_white,1);
     }
     else
     {
-        draw_sprite(spr_heart_empty, 0, 20 + (i * 40), 20);
+        draw_sprite_ext(spr_heart_empty, 0, 5 + (i * 35), 10,4,4,0,c_white,1);
     }
 }
 
