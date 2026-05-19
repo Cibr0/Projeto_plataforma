@@ -23,3 +23,13 @@ if required_powerup {
     }
 
 }
+
+if required_powerup2 { 
+	if global.powerup2{ 
+	sprite_tuto_active = sprite_tuto; 
+	}else{
+	sprite_tuto_active = noone; 
+		} 
+	}else{
+	sprite_tuto_active = sprite_tuto; 
+}

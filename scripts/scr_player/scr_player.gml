@@ -23,15 +23,38 @@ if (!hurt)
     }
 
     //desaceleração/fricção
-    else {
+else {
+
+    var wind = instance_place(x, y, obj_wind);
+
+    var cancel_friction = false;
+
+    if (wind) {
+
+        // vento pra esquerda
+        if (wind.force > 0 && hspd < 0) {
+            cancel_friction = true;
+        }
+
+        // vento pra direita
+        if (wind.force < 0 && hspd > 0) {
+            cancel_friction = true;
+        }
+
+    }
+
+    if (!cancel_friction) {
+
         if (hspd > 0) {
             hspd = max(0, hspd - dcc);
         }
         else if (hspd < 0) {
             hspd = min(0, hspd + dcc);
         }
+
     }
-}
+
+}}
 //knockback
 else
 
@@ -71,13 +94,10 @@ else {
 #region Vento Lateral
 
 var wind = instance_place(x, y, obj_wind);
-var wind_force = 0;
 
 if (wind) {
-    wind_force = -wind.force;
+    hspd += -wind.force;
 }
-
-hspd += wind_force;
 
 #endregion
 //Colisão horizontal
@@ -212,6 +232,7 @@ if (key_eco) {
 
 var water = place_meeting(x, y, obj_water);
 
+
 if (water){
 
 //Gravidade reduzida
@@ -232,7 +253,7 @@ if (vspd > 1.5) {
 
 //Nadar pra cima
 if (keyboard_check_pressed(ord("Z"))) {
-    vspd -= 10;
+    vspd -= 5;
 	}
 }else {
 //Valores normais
@@ -242,15 +263,32 @@ spd_max = 2;
 #endregion
 
 #region animations
-//Animação de pulo
-if (!ground) {
+//Animação na agua
+if (water){
+
+    switch sign(move){
+
+        case 1:
+            image_xscale = -1;
+            sprite_index = spr_cat_walk;
+        break;
+
+        case -1:
+            image_xscale = 1;
+            sprite_index = spr_cat_walk;
+        break;
+
+        case 0:
+            sprite_index = spr_cat_idle;
+        break;
+    }
+
+}else if (!ground) {
 
     sprite_index = spr_cat_jump;
 
-}
-//Animações no chão
-else {
-
+}else{
+    // animações no chão
     switch sign(move){
 
         case 1:
