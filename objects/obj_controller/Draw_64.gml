@@ -3,7 +3,7 @@ draw_set_font(ft_01)
 //fica amarelo quando marca um ponto usando o power up
 if (global.tema_ativo) {
 
-    draw_set_alpha(0.35);
+    draw_set_alpha(0.20);
     draw_set_color(c_yellow);
 
     draw_rectangle(

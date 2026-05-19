@@ -91,3 +91,16 @@ function move_safe() {
     }
     y += vsp;
 }
+switch (state) {
+    case ENEMY_STATE.PATROL: state_patrol(); break;
+    case ENEMY_STATE.CHASE:  state_chase();  break;
+    case ENEMY_STATE.ATTACK: state_attack(); break;
+}
+
+// Faz o sprite virar
+image_xscale = -dir;
+
+// Aplica a gravidade constantemente
+vsp += grv;
+
+move_safe();
