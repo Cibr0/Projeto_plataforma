@@ -6,8 +6,8 @@
   "name":"obj_finish",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"grp_config",
+    "path":"folders/Objects/grp_config.yy",
   },
   "parentObjectId":null,
   "persistent":false,

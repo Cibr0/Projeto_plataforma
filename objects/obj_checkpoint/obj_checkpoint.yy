@@ -8,8 +8,8 @@
   "name":"obj_checkpoint",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"gep_checkpoint",
+    "path":"folders/Objects/gep_checkpoint.yy",
   },
   "parentObjectId":null,
   "persistent":false,

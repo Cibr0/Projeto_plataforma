@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"cat",
-    "path":"folders/Sprites/cat.yy",
+    "name":"grp_cat",
+    "path":"folders/Sprites/grp_cat.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

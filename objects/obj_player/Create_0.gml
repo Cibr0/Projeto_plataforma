@@ -33,6 +33,7 @@ iframe_duration = game_get_speed(gamespeed_fps) * 1; // Tempod de invulnerabilid
 
 flash_alpha_speed = 0.15; // Velocidade da oscilção do efeito
 
+
 function damage (_damage_amount) {
     if (is_invincible) exit;
 
@@ -43,18 +44,16 @@ function damage (_damage_amount) {
     alarm[2] = iframe_duration;
 
 	if (lifes <= 0) {
-		//iniciando na posição do checkpoint
-		if (global.check_y != 0) {
-			x = global.check_x;
-			y = global.check_y;
-			room_restart()
-		} else {
-			room_restart(); // Reinicia a fase atual se morto
-		}
-		
-		lifes = 5;
-	}	
-	
+
+    lifes = 5;
+
+    room_restart();
+	}
+}
+// Spawn no checkpoint
+if (global.check_y != 0) {
+    x = global.check_x;
+    y = global.check_y;
 }
 
 hurt = false;
