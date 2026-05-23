@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"grp_plataform",
-    "path":"folders/Objects/grp_solid/grp_plataform.yy",
+    "path":"folders/Objects/grp_ingame/grp_solid/grp_plataform.yy",
   },
   "parentObjectId":{
     "name":"obj_ice",

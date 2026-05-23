@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"grp_itens",
-    "path":"folders/Objects/grp_itens.yy",
+    "path":"folders/Objects/grp_ingame/grp_itens.yy",
   },
   "parentObjectId":null,
   "persistent":false,

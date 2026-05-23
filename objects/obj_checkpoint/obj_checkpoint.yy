@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"gep_checkpoint",
-    "path":"folders/Objects/gep_checkpoint.yy",
+    "path":"folders/Objects/grp_ingame/gep_checkpoint.yy",
   },
   "parentObjectId":null,
   "persistent":false,

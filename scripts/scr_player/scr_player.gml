@@ -5,8 +5,12 @@ function scr_player_onground(){
 
 #region Movimentação e colisão horizontal
 
+if global.can_move{
 //Variavel de movimentação
 move = -keyboard_check(vk_left) + keyboard_check(vk_right);
+}else{
+move=0
+}
 //Variaveis de colisão
 var ground = place_meeting(x, y + 1, obj_solid);
 var ice = place_meeting(x, y + 1, obj_ice);

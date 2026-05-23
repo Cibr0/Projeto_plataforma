@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"grp_solid",
-    "path":"folders/Objects/grp_solid.yy",
+    "path":"folders/Objects/grp_ingame/grp_solid.yy",
   },
   "parentObjectId":{
     "name":"obj_solid",

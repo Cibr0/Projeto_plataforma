@@ -26,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"grp_enemy",
-    "path":"folders/Sprites/grp_enemy.yy",
+    "path":"folders/Sprites/grp_ingame/grp_enemy.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

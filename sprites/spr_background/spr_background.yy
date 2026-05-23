@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"grp_room",
+    "path":"folders/Sprites/grp_ingame/grp_room.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

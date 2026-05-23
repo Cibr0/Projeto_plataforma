@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"grp_itens",
-    "path":"folders/Sprites/grp_itens.yy",
+    "path":"folders/Sprites/grp_ingame/grp_itens.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

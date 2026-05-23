@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"grp_life",
-    "path":"folders/Sprites/grp_life.yy",
+    "path":"folders/Sprites/grp_ingame/grp_life.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

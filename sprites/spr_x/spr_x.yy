@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"grp_tutorials",
-    "path":"folders/Sprites/grp_tutorials.yy",
+    "path":"folders/Sprites/grp_ingame/grp_tutorials.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

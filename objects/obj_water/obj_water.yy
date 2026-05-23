@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"grp_nature",
-    "path":"folders/Objects/grp_nature.yy",
+    "path":"folders/Objects/grp_ingame/grp_nature.yy",
   },
   "parentObjectId":null,
   "persistent":false,

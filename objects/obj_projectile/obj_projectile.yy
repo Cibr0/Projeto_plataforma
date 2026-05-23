@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"grp_enemy",
-    "path":"folders/Objects/grp_enemy.yy",
+    "path":"folders/Objects/grp_ingame/grp_enemy.yy",
   },
   "parentObjectId":null,
   "persistent":false,

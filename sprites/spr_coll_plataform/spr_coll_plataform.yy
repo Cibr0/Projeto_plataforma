@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"grp_solid",
-    "path":"folders/Sprites/grp_solid.yy",
+    "path":"folders/Sprites/grp_ingame/grp_solid.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"grp_tileset",
-    "path":"folders/Sprites/grp_tileset.yy",
+    "name":"grp_room",
+    "path":"folders/Sprites/grp_ingame/grp_room.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

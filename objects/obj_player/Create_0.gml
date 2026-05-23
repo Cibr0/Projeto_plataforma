@@ -1,6 +1,7 @@
 estado=scr_player_onground
 
 //movimentação
+global.can_move=false
 hspd=0;
 vspd=0;
 spd=0;
