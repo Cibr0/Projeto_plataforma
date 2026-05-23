@@ -1,3 +1,5 @@
+if global.can_move{
+
 draw_set_font(ft_01)
 
 //fica amarelo quando marca um ponto usando o power up
@@ -48,4 +50,5 @@ if (p != noone)
 		draw_sprite_ext(spr_echo, 0, 35, 140, 3, 3 ,0 ,c_white, 1);
 		draw_text(70, 129, string(tempo));
     }
+}
 }

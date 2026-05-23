@@ -12,7 +12,7 @@ sprite_index=spr_sair
 break;
 }
 
-scr_sequences()
+scr_mostrar_menu()
 
 xscale=lerp(xscale,xscale_standard,0.1)
 yscale=lerp(yscale,yscale_standard,0.1)

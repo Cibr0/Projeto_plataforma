@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"grp_sequences",
-    "path":"folders/Sprites/grp_ui/grp_sequences.yy",
+    "name":"grp_bg",
+    "path":"folders/Sprites/grp_ui/grp_sequences/grp_bg.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
