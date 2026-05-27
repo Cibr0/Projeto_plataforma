@@ -56,6 +56,9 @@ if (global.check_y != 0) {
     x = global.check_x;
     y = global.check_y;
 }
+if (variable_global_exists("check_moedas")) {
+    global.moedas = global.check_moedas;
+}
 
 hurt = false;
 

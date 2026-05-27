@@ -266,46 +266,54 @@ spd_max = 2;
 #endregion
 
 #region animations
-//Animação na agua
+
+// Define os sprites baseado no powerup
+var spr_idle = global.powerup1 ? spr_cat_idle_bandana : spr_cat_idle;
+var spr_walk = global.powerup1 ? spr_cat_walk_bandana : spr_cat_walk;
+var spr_jump = global.powerup1 ? spr_cat_jump_bandana : spr_cat_jump;
+
+
+// Animação na água
 if (water){
 
     switch sign(move){
 
         case 1:
             image_xscale = -1;
-            sprite_index = spr_cat_walk;
+            sprite_index = spr_walk;
         break;
 
         case -1:
             image_xscale = 1;
-            sprite_index = spr_cat_walk;
+            sprite_index = spr_walk;
         break;
 
         case 0:
-            sprite_index = spr_cat_idle;
+            sprite_index = spr_idle;
         break;
     }
 
 }else if (!ground) {
 
-    sprite_index = spr_cat_jump;
+    sprite_index = spr_jump;
 
 }else{
+
     // animações no chão
     switch sign(move){
 
         case 1:
             image_xscale = -1;
-            sprite_index = spr_cat_walk;
+            sprite_index = spr_walk;
         break;
 
         case -1:
             image_xscale = 1;
-            sprite_index = spr_cat_walk;
+            sprite_index = spr_walk;
         break;
 
         case 0:
-            sprite_index = spr_cat_idle;
+            sprite_index = spr_idle;
         break;
     }
 

@@ -339,6 +339,6 @@
     "y":70.0,
   },
   "volume":1.0,
-  "xorigin":0,
-  "yorigin":0,
+  "xorigin":-640,
+  "yorigin":-360,
 }
