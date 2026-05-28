@@ -1,4 +1,8 @@
 estado=scr_player_onground
+global.dust=0
+yscale_standard = 1;
+
+yscale = yscale_standard;
 
 //movimentação
 global.can_move=false
@@ -9,6 +13,7 @@ spd_max=2;
 acc=0.28;
 dcc=0.28;
 
+
 //gravidade e pulo
 grav=0.2;
 jump_height=4;
@@ -17,6 +22,8 @@ jump_buffer_max = 8;
 coyote_time_max=11;
 coyote_time=0;
 double_jump = false
+double_jump_anim = false;
+air_stretch = 0;
 
 // Power-up: Eco Temporal
 eco = true;
@@ -63,3 +70,4 @@ if (variable_global_exists("check_moedas")) {
 hurt = false;
 
 tuto=0
+

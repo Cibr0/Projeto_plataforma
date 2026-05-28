@@ -58,6 +58,7 @@ else {
     }
 
 }}
+
 //knockback
 else
 
@@ -76,6 +77,7 @@ else
 if (ground) {
     acc = 0.28;
     dcc = 0.28;
+	double_jump_anim = false;
 
 if (variable_global_exists("powerup2")) {
     
@@ -93,6 +95,7 @@ else {
     acc = 0.20;
     dcc = 0;
 }
+#endregion
 
 #region Vento Lateral
 
@@ -103,7 +106,8 @@ if (wind) {
 }
 
 #endregion
-//Colisão horizontal
+
+#region Colisão horizontal
 if place_meeting(x+round(hspd),y,obj_solid)
 {
 	while !place_meeting(x+sign(hspd),y,obj_solid)
@@ -146,13 +150,17 @@ if (jump_buffer > 0 and (place_meeting(x, y + 1, obj_solid) or coyote_time > 0))
 	jump_buffer = 0
 	coyote_time = 0
 	vspd = -jump_height
+	
 }
 
 if (keyboard_check_pressed(ord("Z")) and !place_meeting(x, y + 1, obj_solid) and coyote_time <0 and !hurt) {
    if (variable_global_exists("powerup2") and global.powerup2 and double_jump) {
         vspd = -jump_height;     
         double_jump = false; 
-        jump_buffer = 0;         
+        jump_buffer = 0; 
+		
+		// ativa animação do segundo pulo
+        double_jump_anim = true;
     }
 }
 
@@ -166,6 +174,7 @@ if (!ground) vspd += grav;
 #endregion
 
 #region Colisão vertival
+
 
 if place_meeting(x,y+(vspd),obj_solid)
 {
@@ -267,13 +276,27 @@ spd_max = 2;
 
 #region animations
 
-// Define os sprites baseado no powerup
+//Define os sprites baseado no powerup
 var spr_idle = global.powerup1 ? spr_cat_idle_bandana : spr_cat_idle;
 var spr_walk = global.powerup1 ? spr_cat_walk_bandana : spr_cat_walk;
 var spr_jump = global.powerup1 ? spr_cat_jump_bandana : spr_cat_jump;
+var spr_double_jump = spr_cat_jordan;
+var spr_fall = global.powerup1 ? spr_cat_fall_bandana : spr_cat_fall;
 
+//direção
+switch(sign(move)){
 
-// Animação na água
+    case 1:
+        image_xscale = -1;
+    break;
+
+    case -1:
+        image_xscale = 1;
+    break;
+
+}
+
+//Animação na água
 if (water){
 
     switch sign(move){
@@ -295,7 +318,27 @@ if (water){
 
 }else if (!ground) {
 
-    sprite_index = spr_jump;
+    // segundo pulo subindo
+    if (double_jump_anim && vspd < 0){
+
+        sprite_index = spr_double_jump;
+		global.dust=1
+
+    }
+
+    // caindo depois do double jump
+    else if (double_jump_anim && vspd > 0){
+
+        sprite_index = spr_fall;
+		global.dust=0
+    }
+
+    // pulo normal
+    else{
+
+        sprite_index = spr_jump;
+
+    }
 
 }else{
 
@@ -319,6 +362,31 @@ if (water){
 
 }
 
+#endregion
+
+#region
+var target_y = yscale_standard;
+
+// subindo
+if (!ground && vspd < 0)
+{
+    target_y = 1.3;
+}
+
+// caindo
+else if (!ground && vspd > 0)
+{
+    target_y = 0.85;
+}
+
+// volta normal
+else
+{
+    target_y = yscale_standard;
+}
+
+// suaviza
+yscale = lerp(yscale, target_y, 0.2);
 #endregion
 
 }
