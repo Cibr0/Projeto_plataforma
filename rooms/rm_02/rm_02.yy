@@ -69,10 +69,11 @@
   "isDnd":false,
   "layers":[
     {"$GMRTileLayer":"","%Name":"tl_back","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"tl_back","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":120,"TileCompressedData":[
-          -8,-2147483648,-52,0,-68,-2147483648,-52,0,-68,-2147483648,-52,0,-68,-2147483648,-52,0,-68,-2147483648,
-          -52,0,-68,-2147483648,-52,0,-68,-2147483648,-52,0,-68,-2147483648,-52,0,-67,-2147483648,-53,0,-65,-2147483648,
-          -5,0,3,189,190,191,-47,0,-65,-2147483648,2,0,-2147483648,-3,0,3,189,190,191,-47,0,-65,-2147483648,3,
-          0,-2147483648,-2147483648,-52,0,-60,-2147483648,
+          -8,-2147483648,-52,0,-31,-2147483648,2,96,98,-35,-2147483648,-52,0,-31,-2147483648,2,96,98,-35,-2147483648,
+          -52,0,-31,-2147483648,2,96,98,-35,-2147483648,-52,0,-31,-2147483648,2,96,98,-35,-2147483648,-52,0,-31,
+          -2147483648,2,96,98,-35,-2147483648,-52,0,-31,-2147483648,2,96,98,-35,-2147483648,-52,0,-31,-2147483648,
+          2,116,118,-35,-2147483648,-52,0,-67,-2147483648,-53,0,-65,-2147483648,-5,0,3,189,190,191,-47,0,-65,-2147483648,
+          2,0,-2147483648,-3,0,3,189,190,191,-47,0,-65,-2147483648,3,0,-2147483648,-2147483648,-52,0,-60,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tl_01","path":"tilesets/tl_01/tl_01.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Instances_player","depth":100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_17A0800C1_1","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_17A0800C1_1","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":26.0,"y":120.0,},
