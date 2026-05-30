@@ -8,5 +8,6 @@ function scr_mostrar_menu()
 function scr_cutscene()
 {
 	global.can_move=true
+	global.intro_finished = true;
 }
 

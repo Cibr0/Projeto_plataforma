@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_dust",
-    "path":"sprites/spr_dust/spr_dust.yy",
+    "name":"spr_dust2",
+    "path":"sprites/spr_dust2/spr_dust2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

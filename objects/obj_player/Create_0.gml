@@ -5,7 +5,7 @@ yscale_standard = 1;
 yscale = yscale_standard;
 
 //movimentação
-global.can_move=false
+global.can_move = global.intro_finished;
 hspd=0;
 vspd=0;
 spd=0;
@@ -66,6 +66,8 @@ if (global.check_y != 0) {
 if (variable_global_exists("check_moedas")) {
     global.moedas = global.check_moedas;
 }
+
+
 
 hurt = false;
 

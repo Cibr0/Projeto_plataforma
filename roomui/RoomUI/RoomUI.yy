@@ -19,11 +19,6 @@
               ],"flexDirection":0,"height":{"unit":3,"value":15.0,},"justifyContent":1,"name":"FlexPanel_1","nodeColour":4294072904,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":79.0,},},
           ],"flexDirection":0,"gapRow":30.0,"height":{"unit":2,"value":50.0,},"justifyContent":1,"name":"btns","nodeColour":4282970764,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":50.0,},},
       ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"ui_menu","nodeColour":4288279112,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
-    {"$GMRUILayer":"v1","%Name":"ui_cutscene","alignItems":2,"children":[
-        {"$GMRFlexPanel":"","%Name":"FlexPanel","alignItems":2,"children":[
-            {"$GMRSequenceGraphic":"v1","%Name":"graphic_4D0032B2","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_4D0032B2","resourceType":"GMRSequenceGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"sequenceId":{"name":"sqc_menu","path":"sequences/sqc_menu/sqc_menu.yy",},"x":0.0,"y":0.0,},
-          ],"flexDirection":0,"height":{"unit":3,"value":1440.0,},"justifyContent":1,"name":"FlexPanel","nodeColour":4294083912,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":1280.0,},},
-      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"ui_cutscene","nodeColour":4283713778,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
   ],
   "locked":false,
   "name":"RoomUI",
@@ -34,5 +29,5 @@
   "resourceType":"GMRoomUI",
   "resourceVersion":"2.0",
   "viewspaceChildren":[],
-  "visible":true,
+  "visible":false,
 }

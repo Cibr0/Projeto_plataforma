@@ -1,3 +1,12 @@
+if (global.screen_transition)
+{
+    image_speed = 0;
+    exit;
+}
+else
+{
+    image_speed = 1;
+}
 script_execute(estado)
 
 if (is_invincible) {
@@ -16,3 +25,13 @@ if tuto_obj != noone {
     tuto = 0;
 }
 
+if (global.dust == 1 && !dust_created)
+{
+    instance_create_layer(x, y + 15, "Instances", obj_dust);
+    dust_created = true;
+}
+
+if (place_meeting(x, y + 1, obj_solid))
+{
+    dust_created = false;
+}

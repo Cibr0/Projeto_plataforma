@@ -121,7 +121,7 @@ x += round(hspd);
 #endregion
 
 #region Pulo variavel, CoyoteTime, Jump Buffer e Gravidade
-
+if global.can_move{
 //Botões para o pulo variavel
 var key_jump_pressed = keyboard_check_pressed(ord("Z"))
 var key_jump = keyboard_check(ord("Z"))
@@ -170,7 +170,7 @@ if (!key_jump and vspd < 0){vspd = max(vspd, -jump_height / 2)}
 
 //gravidade
 if (!ground) vspd += grav;
-
+}
 #endregion
 
 #region Colisão vertival
@@ -364,7 +364,7 @@ if (water){
 
 #endregion
 
-#region
+#region squash e stretch
 var target_y = yscale_standard;
 
 // subindo
