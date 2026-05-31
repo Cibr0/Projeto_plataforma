@@ -35,8 +35,8 @@
   },
   "name":"sqc_menu",
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"Sequências",
+    "path":"folders/Sequências.yy",
   },
   "playback":0,
   "playbackSpeed":5.0,

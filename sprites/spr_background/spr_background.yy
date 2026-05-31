@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"grp_room",
-    "path":"folders/Sprites/grp_ingame/grp_room.yy",
+    "name":"grp_background",
+    "path":"folders/Sprites/grp_background.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
