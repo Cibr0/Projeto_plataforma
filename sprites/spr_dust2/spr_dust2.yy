@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":1,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"grp_effects",
+    "path":"folders/Sprites/grp_cat/grp_effects.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

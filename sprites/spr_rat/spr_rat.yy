@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"grp_ingame",
-    "path":"folders/Sprites/grp_ingame.yy",
+    "name":"grp_enemy",
+    "path":"folders/Sprites/grp_ingame/grp_enemy.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

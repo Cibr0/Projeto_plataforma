@@ -6,8 +6,8 @@
   "name":"obj_spikes",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"grp_solid",
+    "path":"folders/Objects/grp_ingame/grp_solid.yy",
   },
   "parentObjectId":null,
   "persistent":false,

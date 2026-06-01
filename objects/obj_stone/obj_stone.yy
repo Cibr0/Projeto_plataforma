@@ -1,19 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_dust",
+  "%Name":"obj_stone",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_dust",
+  "name":"obj_stone",
   "overriddenProperties":[],
   "parent":{
-    "name":"grp_effects",
-    "path":"folders/Objects/grp_ingame/grp_effects.yy",
+    "name":"grp_solid",
+    "path":"folders/Objects/grp_ingame/grp_solid.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_solid",
+    "path":"objects/obj_solid/obj_solid.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_dust2",
-    "path":"sprites/spr_dust2/spr_dust2.yy",
+    "name":"spr_coll_plataform",
+    "path":"sprites/spr_coll_plataform/spr_coll_plataform.yy",
   },
   "spriteMaskId":null,
   "visible":true,

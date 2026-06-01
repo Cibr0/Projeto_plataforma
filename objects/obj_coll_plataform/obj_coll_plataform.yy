@@ -6,8 +6,8 @@
   "name":"obj_coll_plataform",
   "overriddenProperties":[],
   "parent":{
-    "name":"grp_plataform",
-    "path":"folders/Objects/grp_ingame/grp_solid/grp_plataform.yy",
+    "name":"grp_solid",
+    "path":"folders/Objects/grp_ingame/grp_solid.yy",
   },
   "parentObjectId":null,
   "persistent":false,

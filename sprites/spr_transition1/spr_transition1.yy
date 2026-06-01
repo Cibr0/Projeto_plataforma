@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"grp_sequencias",
-    "path":"folders/Sprites/grp_sequencias.yy",
+    "path":"folders/Sprites/grp_ui/grp_sequencias.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

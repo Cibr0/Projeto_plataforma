@@ -24,15 +24,15 @@ var p = instance_find(obj_player, 0);
 
 //HUD
 // desenhar corações
-for (var i = 0; i < 5; i++)
+for (var i = 0; i < 3; i++)
 {
     if (i < p.lifes)
     {
-        draw_sprite_ext(spr_heart_full, 0, 5 + (i * 35), 10,4,4,0,c_white,1);
+        draw_sprite_ext(spr_heart_full, 0, 3 + (i * 35), 10,4,4,0,c_white,1);
     }
     else
     {
-        draw_sprite_ext(spr_heart_empty, 0, 5 + (i * 35), 10,4,4,0,c_white,1);
+        draw_sprite_ext(spr_heart_empty, 0, 3 + (i * 35), 10,4,4,0,c_white,1);
     }
 }
 

@@ -1,18 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_projectile",
+  "%Name":"obj_crystal",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_projectile",
+  "name":"obj_crystal",
   "overriddenProperties":[],
   "parent":{
-    "name":"grp_enemy",
-    "path":"folders/Objects/grp_ingame/grp_enemy.yy",
+    "name":"grp_itens",
+    "path":"folders/Objects/grp_ingame/grp_itens.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -33,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_snow",
-    "path":"sprites/spr_snow/spr_snow.yy",
+    "name":"spr_ice",
+    "path":"sprites/spr_ice/spr_ice.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -35,7 +35,7 @@ ecoy = 0;
 eco_time = game_get_speed(gamespeed_fps) * 10; 
 eco_cooldown = game_get_speed(gamespeed_fps) * 5;
 
-lifes = 5; // Número de vida do jogador
+lifes = 3; // Número de vida do jogador
 is_invincible = false; // Impede novos danos se true
 iframe_duration = game_get_speed(gamespeed_fps) * 1; // Tempod de invulnerabilidade (1 segundo)
 
@@ -53,7 +53,7 @@ function damage (_damage_amount) {
 
 	if (lifes <= 0) {
 
-    lifes = 5;
+    lifes = 3;
 
     room_restart();
 	}

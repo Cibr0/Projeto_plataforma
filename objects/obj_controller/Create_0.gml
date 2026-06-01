@@ -2,6 +2,8 @@ global.powerup2 = false;
 
 global.moedas=0
 
+global.crystal=0
+
 global.wind=false
 
 global.tema_ativo = false;
