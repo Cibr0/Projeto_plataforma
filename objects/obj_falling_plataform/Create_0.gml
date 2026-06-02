@@ -10,5 +10,3 @@ fall_time = 20;
 
 restore_time = 90;
 
-visible = true;
-solid = true;

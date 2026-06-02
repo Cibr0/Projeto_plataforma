@@ -13,8 +13,8 @@
     "path":"folders/Objects/grp_ingame/grp_solid/grp_plataform.yy",
   },
   "parentObjectId":{
-    "name":"obj_ice",
-    "path":"objects/obj_ice/obj_ice.yy",
+    "name":"obj_solid",
+    "path":"objects/obj_solid/obj_solid.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
