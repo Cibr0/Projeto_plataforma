@@ -35,3 +35,10 @@ if (place_meeting(x, y + 1, obj_solid))
 {
     dust_created = false;
 }
+
+//Impede o jogador de voltar para telas já ultrapassadas
+var _limit = obj_camera.max_screen_x;
+
+if (x < _limit) {
+    x = _limit;
+}

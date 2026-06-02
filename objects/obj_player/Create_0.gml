@@ -54,7 +54,7 @@ function damage (_damage_amount) {
 	if (lifes <= 0) {
 
     lifes = 3;
-
+	global.crystal=0
     room_restart();
 	}
 }

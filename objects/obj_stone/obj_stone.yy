@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_coll_plataform",
-    "path":"sprites/spr_coll_plataform/spr_coll_plataform.yy",
+    "name":"spr_monolito",
+    "path":"sprites/spr_monolito/spr_monolito.yy",
   },
   "spriteMaskId":null,
   "visible":true,

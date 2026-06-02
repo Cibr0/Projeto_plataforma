@@ -4,8 +4,6 @@ switch (state) {
     case ENEMY_STATE.ATTACK: state_attack(); break;
 }
 
-
-
 //Faz o sprite virar
 image_xscale = -dir;
 
@@ -24,15 +22,23 @@ if (instance_exists(obj_player)) {
     
     // Só muda de estado se estiver no chão
 if (place_meeting(x, y + 1, obj_solid)) {
-    if (_dx <= dist_attack and _dy <= 24 and can_attack) {
-	state = ENEMY_STATE.ATTACK;
-	}
-	else if (_dx <= dist_detect and _dy <= 24) {
-		state = ENEMY_STATE.CHASE;
-	}
-	else {
-		state = ENEMY_STATE.PATROL;
-		}
+if (can_attack_player &&
+    _dx <= dist_attack &&
+    _dy <= 8 &&
+    can_attack)
+{
+    state = ENEMY_STATE.ATTACK;
+}
+else if (can_chase &&
+         _dx <= dist_detect &&
+         _dy <= 8)
+{
+    state = ENEMY_STATE.CHASE;
+}
+else
+{
+    state = ENEMY_STATE.PATROL;
+}
     }
 }
 
@@ -47,7 +53,7 @@ function state_patrol() {
     
     //Checa se há chão logo à frente (com base na sprite/origem do inimigo)
     var _floor_ahead = place_meeting(x + (dir * 16), y + 1, obj_solid);
-
+	
     //Se bater na parede, em outro inimigo, OU se NÃO tiver chão à frente: vira de lado
     if (_wall_ahead || _enemy_ahead || !_floor_ahead) {
         dir *= -1;

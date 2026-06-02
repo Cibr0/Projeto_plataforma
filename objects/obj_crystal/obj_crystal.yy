@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ice",
-    "path":"sprites/spr_ice/spr_ice.yy",
+    "name":"spr_crystal",
+    "path":"sprites/spr_crystal/spr_crystal.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -27,3 +27,6 @@ dash_timer = 0;
 
 attack_windup = 15;// tempo de preparação
 windup_timer = 0;
+
+can_chase = true;
+can_attack_player = true;
