@@ -221,6 +221,7 @@ if (key_eco) {
 		
         ecox = x;
         ecoy = y;
+		
         eco_load = true; 
 		//atima tema alternativo
 		global.tema_ativo = true;
