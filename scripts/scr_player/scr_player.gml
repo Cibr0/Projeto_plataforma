@@ -196,6 +196,24 @@ if global.powerup1=true{
 // Input do Eco 
 var key_eco = keyboard_check_pressed(ord("X"));
 
+
+	// Se mudou de tela, cancela o Eco Temporal
+if (global.screen_transition && eco_load) {
+
+    eco_load = false;
+    eco = false;
+
+    // desativa tema alternativo
+    global.tema_ativo = false;
+
+    // cancela o alarme do eco ativo
+    alarm[0] = -1;
+
+    // inicia cooldown
+    if (alarm[1] <= 0) {
+        alarm[1] = eco_cooldown;
+    }
+}
 if (key_eco) {
     // ESTADO 1: Criar o Eco
     // Só funciona se o poder estiver carregado (eco) e não houver um ponto ativo (!eco_load)
