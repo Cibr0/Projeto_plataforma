@@ -1,3 +1,4 @@
+display_set_gui_size(320,180);
 if global.can_move{
 
 draw_set_font(ft_01)
@@ -20,6 +21,7 @@ if (global.tema_ativo) {
     draw_set_color(c_white);
 }
 
+
 var p = instance_find(obj_player, 0);
 
 //HUD
@@ -28,18 +30,19 @@ for (var i = 0; i < 3; i++)
 {
     if (i < p.lifes)
     {
-        draw_sprite_ext(spr_heart_full, 0, 3 + (i * 35), 10,4,4,0,c_white,1);
+        draw_sprite_ext(spr_heart_full, 0, 3 + (i * 8), 5,1,1,0,c_white,1);
     }
     else
     {
-        draw_sprite_ext(spr_heart_empty, 0, 3 + (i * 35), 10,4,4,0,c_white,1);
+        draw_sprite_ext(spr_heart_empty, 0, 3 + (i * 8), 5,1,1,0,c_white,1);
     }
 }
 
 // contador moeda
-draw_sprite_ext(spr_fish, 0, 35, 80, 5, 5 ,0 ,c_white, 1);
+draw_sprite_ext(spr_fish, 0, 11, 25, 1, 1 ,0 ,c_white, 1);
 draw_set_color(c_white);
-draw_text(70, 71, string(global.moedas));
+draw_text_transformed(20,22.5,string(global.moedas),0.3,0.3,0);
+
 
 //Cooldown PowerUp
 if (p != noone)
@@ -47,8 +50,8 @@ if (p != noone)
     if (p.alarm[1] > 0)
     {
         var tempo = ceil(p.alarm[1] / game_get_speed(gamespeed_fps));
-		draw_sprite_ext(spr_echo, 0, 35, 140, 3, 3 ,0 ,c_white, 1);
-		draw_text(70, 129, string(tempo));
+		draw_sprite_ext(spr_echo, 0, 11, 35, 0.7, 0.7 ,0 ,c_white, 1);
+		draw_text_transformed(20, 32.5, string(tempo),0.3,0.3,0);
     }
 }
 }

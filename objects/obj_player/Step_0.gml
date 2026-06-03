@@ -1,3 +1,19 @@
+if (y > room_height) // ou teu limite do void
+{
+    if (!global.dying)
+    {
+        global.dying = true;
+        image_speed = 0;
+        hspd = 0;
+        vspd = 0;
+
+        alarm[0] = 1; // morte imediata no próximo frame
+    }
+
+    exit;
+}
+
+
 if (global.screen_transition)
 {
     image_speed = 0;

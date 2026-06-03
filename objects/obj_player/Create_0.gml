@@ -1,9 +1,11 @@
+display_set_gui_size(1280,720);
 estado=scr_player_onground
 global.dust=0
 yscale_standard = 1;
 
 yscale = yscale_standard;
 
+global.dying = false;
 //movimentação
 global.can_move = global.intro_finished;
 hspd=0;
@@ -54,9 +56,13 @@ function damage (_damage_amount) {
 	if (lifes <= 0) {
 
     lifes = 3;
+	global.camera_lock = 2;
+	global.dying = true;
 	global.crystal=0
-    room_restart();
-	}
+	display_set_gui_size(320,180);
+	global.seqfadein = layer_sequence_create("UI", 0, 0, sqc_nextday_fadein);
+	global.can_move=false
+ 	}
 }
 // Spawn no checkpoint
 if (global.check_y != 0) {
