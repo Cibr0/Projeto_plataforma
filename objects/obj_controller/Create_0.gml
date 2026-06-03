@@ -17,6 +17,7 @@ if (room == rm_01) {
 	intro_sqc=layer_sequence_get_instance(intro_sqc_element)
 }
 
+
 if !variable_global_exists("intro_finished")
 {
     global.intro_finished = false;

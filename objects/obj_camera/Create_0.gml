@@ -9,3 +9,5 @@ max_screen_x = 0;
 
 first_frame=true
 global.camera_lock = 0;
+
+transition_old = false;

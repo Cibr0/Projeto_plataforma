@@ -1,13 +1,18 @@
+//configurações da GUI
 display_set_gui_size(1280,720);
+//estado inicial
 estado=scr_player_onground
-global.dust=0
-yscale_standard = 1;
+global.can_move = global.intro_finished;
+global.dying = false;
 
+//poeira gerada ao pular
+global.dust=0
+
+//Escala vertical padrão do sprite
+yscale_standard = 1;
 yscale = yscale_standard;
 
-global.dying = false;
 //movimentação
-global.can_move = global.intro_finished;
 hspd=0;
 vspd=0;
 spd=0;
@@ -45,22 +50,27 @@ flash_alpha_speed = 0.15; // Velocidade da oscilção do efeito
 
 
 function damage (_damage_amount) {
+	//Impede receber dano durante invulnerabilidade
     if (is_invincible) exit;
 
     lifes -= _damage_amount; // Aplica o dano 
 
-    // Ativa a flag de proteção
+   //Ativa invulnerabilidade temporária
     is_invincible = true; 
     alarm[2] = iframe_duration;
 
 	if (lifes <= 0) {
-
+	//Reseta vidas
     lifes = 3;
+	//Reseta variáveis globais importantes
 	global.camera_lock = 2;
 	global.dying = true;
 	global.crystal=0
+	//Ajusta GUI para sequência de morte
 	display_set_gui_size(320,180);
+	//Inicia fade da transição
 	global.seqfadein = layer_sequence_create("UI", 0, 0, sqc_nextday_fadein);
+	//Bloqueia movimentação
 	global.can_move=false
  	}
 }
@@ -73,9 +83,9 @@ if (variable_global_exists("check_moedas")) {
     global.moedas = global.check_moedas;
 }
 
-
-
+//Indica se o jogador está machucado
 hurt = false;
 
+//tutorial 
 tuto=0
 

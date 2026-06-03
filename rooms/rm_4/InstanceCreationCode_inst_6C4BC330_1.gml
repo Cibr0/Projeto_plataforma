@@ -1,1 +1,0 @@
-dist_detect = 10;

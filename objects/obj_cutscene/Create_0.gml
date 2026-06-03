@@ -1,0 +1,2 @@
+global.sqcfinal=0
+
