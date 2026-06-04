@@ -157,6 +157,7 @@
     {"id":{"name":"spr_heart_full","path":"sprites/spr_heart_full/spr_heart_full.yy",},},
     {"id":{"name":"spr_ice","path":"sprites/spr_ice/spr_ice.yy",},},
     {"id":{"name":"spr_jogar","path":"sprites/spr_jogar/spr_jogar.yy",},},
+    {"id":{"name":"spr_logo","path":"sprites/spr_logo/spr_logo.yy",},},
     {"id":{"name":"spr_machine","path":"sprites/spr_machine/spr_machine.yy",},},
     {"id":{"name":"spr_monolito","path":"sprites/spr_monolito/spr_monolito.yy",},},
     {"id":{"name":"spr_move_plataform","path":"sprites/spr_move_plataform/spr_move_plataform.yy",},},
